@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Copilot_20251118_235425.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Copilot_20251118_234934.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

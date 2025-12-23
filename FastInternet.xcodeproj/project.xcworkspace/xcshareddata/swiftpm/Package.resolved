@@ -1,0 +1,15 @@
+{
+  "originHash" : "044e5a22071888805e4c9448470ec3f54194d12048f8412443a879d26a9e45a6",
+  "pins" : [
+    {
+      "identity" : "fast-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pedroomar23/fast-ios-sdk.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e2305bf05f9a71906e0794134866489c8df87165"
+      }
+    }
+  ],
+  "version" : 3
+}
