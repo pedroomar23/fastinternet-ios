@@ -11,7 +11,26 @@ import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        return true 
+        registerAppOpenTime()
+        return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        registerAppCloseTime()
+    }
+    
+    private func registerAppOpenTime() {
+        let date = Date()
+        if let userDefaults = UserDefaults(suiteName: "comm.app.storage.fastinternet") {
+            userDefaults.set(date, forKey: "appOpenAt")
+        }
+    }
+    
+    private func registerAppCloseTime() {
+        let date = Date()
+        if let userDefaults = UserDefaults(suiteName: "com.app.storage.fastinternet") {
+            userDefaults.set(date, forKey: "onCloseAt")
+        }
     }
 }
 

@@ -20,5 +20,5 @@ struct FastInternetApp: App {
     @ViewBuilder
     private func _getApplicationView() -> some View {
         ContentView()
-    }
+    } 
 }

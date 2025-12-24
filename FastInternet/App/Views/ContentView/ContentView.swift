@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var fastRequest = FastRequest()
+    @Environment(\.colorScheme) var colorScheme
+   
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")       
+        ContentNavigation {
+            VStack {
+                
+            }
+            .toolbar {
+                _toolbar(label: LabelBar(icon: "gear"))
+            }
         }
-        .padding()
+    }
+    
+    @ToolbarContentBuilder
+    private func _toolbar(label: LabelBar) -> some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            NavigationLink {
+                Settings()
+            } label: {
+                Image(systemName: label.icon)
+                    .foregroundStyle(colorScheme == .dark ? .white : .black)
+                    .font(.system(size: 20, weight: .medium))
+            }
+        }
     }
 }
 

@@ -5,7 +5,6 @@
 //  Created by Pedro Omar  on 12/19/25.
 //
 
-import Foundation
 import SwiftUI
 import Combine
 import FastSdk
